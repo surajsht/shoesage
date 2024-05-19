@@ -4,9 +4,9 @@ createServer({
   routes() {
     this.namespace = "api";
 
-    this.get("/movies", () => {
+    this.get("/products", () => {
       return {
-        movies: [
+        products: [
           {
             id: 1,
             title: "Plain Basic T-Shirt",
