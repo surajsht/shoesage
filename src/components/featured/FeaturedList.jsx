@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedList = () => {
   let [featuredData, setFeaturedData] = useState([]);
@@ -20,12 +21,14 @@ const FeaturedList = () => {
   return (
     <div className="featured-list">
       {featuredData.map((item) => {
-        let { id, img, title, category, price } = item;
+        let { id, img, title, price } = item;
 
         return (
           <div key={id} className="featured-list-item">
             <img src={img} alt="product-item" />
-            <h2 className="featured-item-title"> {title} </h2>
+            <Link to={`/product/${id}`} className="featured-item-title">
+              {title}
+            </Link>
             <span className="featured-item-price"> Rs.{price} </span>
           </div>
         );

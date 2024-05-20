@@ -279,16 +279,16 @@ createServer({
       return {
         products: [
           {
+            id: 17,
+            title: "Tencel Shorts",
+            img: "/shorts/shorts-five/shorts-five.webp",
+            price: 1348,
+          },
+          {
             id: 6,
             title: "Embroidered Button-Up Top",
             img: "/shirt/shirt-two/shirt-two.webp",
             price: 1498,
-          },
-          {
-            id: 9,
-            title: "Polar Fleece Zip High Neck",
-            img: "/sweatshirt/sweatshirt-one/sweatshirt-one.webp",
-            price: 1998,
           },
           {
             id: 11,
@@ -296,23 +296,24 @@ createServer({
             img: "/sweatshirt/sweatshirt-three/sweatshirt-three.webp",
             price: 1798,
           },
+
           {
-            id: 14,
-            title: "Zip-Pocket Shorts",
-            img: "/shorts/shorts-two/shorts-two.webp",
-            price: 1648,
-          },
-          {
-            id: 17,
-            title: "Tencel Shorts",
-            img: "/shorts/shorts-five/shorts-five.webp",
-            price: 1348,
+            id: 9,
+            title: "Polar Fleece Zip High Neck",
+            img: "/sweatshirt/sweatshirt-one/sweatshirt-one.webp",
+            price: 1998,
           },
           {
             id: 1,
             title: "Plain Basic T-Shirt",
             img: "/tshirt/tshirt-one/tshirt-one.webp",
             price: 998,
+          },
+          {
+            id: 14,
+            title: "Zip-Pocket Shorts",
+            img: "/shorts/shorts-two/shorts-two.webp",
+            price: 1648,
           },
         ],
       };
