@@ -1,42 +1,21 @@
-import { useState, useEffect } from "react";
-import { useCon } from "../../context/Context";
+import { Link } from "react-router-dom";
+import FeaturedList from "./FeaturedList";
+import "./featured.css";
 
 const Featured = () => {
-  const [shuffledArray, setShuffledArray] = useState([]);
-
-  let { apiData, loading } = useCon();
-
-  let randomItems = () => {
-    if (apiData && apiData.length > 0) {
-      let dataCopy = [...apiData];
-
-      for (let i = dataCopy.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [dataCopy[i], dataCopy[j]] = [dataCopy[j], dataCopy[i]];
-      }
-
-      let sliceDataCopy = dataCopy.slice(0, 8);
-      setShuffledArray(sliceDataCopy);
-    }
-  };
-
-  useEffect(() => {
-    randomItems();
-  }, [apiData]);
-
   return (
-    <div>
-      <h2>Featured Items</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul>
-          {shuffledArray.map((item) => (
-            <li key={item.id}>{item.title}</li> // Assuming item has a unique id and name
-          ))}
-        </ul>
-      )}
-    </div>
+    <section className="featured-section">
+      <div className="wrapper">
+        <div className="featured-header">
+          <h2 className="featured-title"> Featured Products </h2>
+          <Link to="/shop" className="secondary-btn">
+            Shop Now
+          </Link>
+        </div>
+
+        <FeaturedList />
+      </div>
+    </section>
   );
 };
 

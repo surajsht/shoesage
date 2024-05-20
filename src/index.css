@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #ed3233;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
 }
 
 h1,
@@ -23,16 +28,20 @@ h6 {
   line-height: 1.2;
 }
 
-.primary-btn {
+.primary-btn,
+.secondary-btn {
   position: relative;
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #000;
   text-decoration: none;
+  transition: 0.4s;
+}
+
+.primary-btn {
+  color: #000;
   padding: 1.6rem 3.2rem;
   border: 1px solid #000;
-  transition: 0.4s;
 }
 
 .primary-btn:hover,
@@ -49,7 +58,7 @@ h6 {
   bottom: 0;
   height: 100%;
   width: 0;
-  background-color: #ed3233;
+  background-color: var(--primary-color);
   z-index: -1;
   transition: 0.4s;
 }
@@ -57,6 +66,18 @@ h6 {
 .primary-btn:hover::before,
 .primary-btn:focus::before {
   width: 100%;
+}
+
+.secondary-btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 1.2rem 2rem;
+  border: 0;
+}
+
+.secondary-btn:hover,
+.secondary-btn:focus {
+  background-color: #000;
 }
 
 .wrapper {
