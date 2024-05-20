@@ -103,6 +103,8 @@ h6 {
 @media (max-width: 767px) {
   .wrapper {
     max-width: 54rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 }
 
@@ -122,12 +124,26 @@ h6 {
   margin-left: -2.4rem;
 }
 
+@media (max-width: 767px) {
+  .column-row {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+  }
+}
+
 .column {
   position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
+}
+
+@media (max-width: 767px) {
+  .column {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
 }
 
 .column-9 {

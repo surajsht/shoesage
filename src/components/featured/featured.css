@@ -33,6 +33,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .featured-list {
+    gap: 1.6rem;
+  }
+}
+
 .featured-list img {
   height: 52rem;
   width: 100%;
