@@ -1,18 +1,18 @@
-.product-loader-container {
+.product-loader-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.2rem;
 }
 
 @media (max-width: 991px) {
-  .product-loader-container {
+  .product-loader-content {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
   }
 }
 
 @media (max-width: 767px) {
-  .product-loader-container {
+  .product-loader-content {
     gap: 1.6rem;
   }
 }
