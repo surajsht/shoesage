@@ -1,6 +1,7 @@
 import { createServer } from "miragejs";
 
 createServer({
+  timing: 1500,
   routes() {
     this.namespace = "api";
 
