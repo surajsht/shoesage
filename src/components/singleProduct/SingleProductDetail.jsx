@@ -29,7 +29,7 @@ const SingleProductDetail = () => {
 
   if (loading) return <h1> Loading... </h1>;
 
-  let { title, category, img, description, extraImg } = productDetail;
+  let { title, category, img, description, extraImg, price } = productDetail;
 
   return (
     <div className="single-product-container">
@@ -58,9 +58,15 @@ const SingleProductDetail = () => {
       </div>
 
       <div className="single-product-details">
-        <h2> {title}</h2>
-        <span> Category: {category} </span>
-        <p> {description} </p>
+        <h2 className="product-detail-title"> {title}</h2>
+        <span className="product-detail-category"> Category: {category} </span>
+        <p className="product-detail-description"> {description} </p>
+        <span className="product-detail-price"> Rs.{price} </span>
+
+        <div className="product-btn-group">
+          <button className="secondary-btn"> Add to cart </button>
+          <button className="secondary-btn outlined"> Add to Wishlist </button>
+        </div>
       </div>
     </div>
   );
