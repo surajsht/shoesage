@@ -1,0 +1,35 @@
+.single-product-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.single-product-images {
+  width: 45%;
+}
+
+.single-product-images > img {
+  height: 60rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-extra-images {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.product-extra-images img {
+  flex: 1;
+  height: 9.2rem;
+  object-fit: cover;
+  border: 1px solid transparent;
+}
+
+.product-extra-images img.active {
+  border-color: var(--primary-color);
+}
+
+.single-product-details {
+  width: calc(100% - 45% - 4rem);
+}
