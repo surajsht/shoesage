@@ -31,7 +31,7 @@ const SingleProductDetail = () => {
 
   useEffect(() => {
     getProduct();
-  }, []);
+  }, [productid]);
 
   if (loading) return <SingleProductLoader />;
 
