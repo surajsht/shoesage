@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./singleProductDetail.css";
+import SingleProductLoader from "../loader/singleProductLoader/SingleProductLoader";
 
 const SingleProductDetail = () => {
   let [productDetail, setProductDetail] = useState([]);
@@ -27,7 +28,7 @@ const SingleProductDetail = () => {
     getProduct();
   }, []);
 
-  if (loading) return <h1> Loading... </h1>;
+  if (loading) return <SingleProductLoader />;
 
   let { title, category, img, description, extraImg, price } = productDetail;
 

@@ -2,7 +2,7 @@ import SingleProductDetail from "../components/singleProduct/SingleProductDetail
 
 const SingleProduct = () => {
   return (
-    <div>
+    <div className="singleProduct-wrapper">
       <div className="wrapper">
         <SingleProductDetail />
       </div>

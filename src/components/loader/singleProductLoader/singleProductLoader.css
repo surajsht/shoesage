@@ -1,0 +1,101 @@
+.singleProduct-loader-wrapper {
+  margin-top: 12rem;
+}
+
+.singleProduct-loader-container {
+  display: flex;
+  gap: 4rem;
+}
+
+@media (max-width: 991px) {
+  .singleProduct-loader-container {
+    flex-wrap: wrap;
+  }
+}
+
+.singleProduct-loader-left {
+  width: 45%;
+}
+
+@media (max-width: 991px) {
+  .singleProduct-loader-left {
+    width: 100%;
+  }
+}
+
+.singleProduct-loader-left > div:first-child {
+  height: 60rem;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .singleProduct-loader-left > div:first-child {
+    height: 48rem;
+  }
+}
+
+.loader-left-group {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.loader-left-group div {
+  flex: 1;
+  height: 9.2rem;
+}
+
+.singleProduct-loader-right {
+  width: calc(100% - 45% - 4rem);
+}
+
+@media (max-width: 991px) {
+  .singleProduct-loader-right {
+    width: 100%;
+  }
+}
+
+.singleProduct-loader-right div:first-child {
+  height: 5.2rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.singleProduct-loader-right div:nth-child(2) {
+  height: 2.4rem;
+  width: 8rem;
+  margin-bottom: 1.6rem;
+}
+
+.singleProduct-loader-right div:nth-child(3) {
+  height: 20rem;
+  width: 100%;
+}
+
+.singleProduct-loader-right div:nth-child(4) {
+  height: 4rem;
+  width: 8rem;
+  margin-top: 1.2rem;
+}
+
+.singleProduct-loader-right div:nth-child(5) {
+  height: 4rem;
+  width: 16rem;
+  margin-top: 3.2rem;
+}
+
+.singleProduct-loader-item {
+  position: relative;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%;
+  animation: skeleton 0.9s infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
