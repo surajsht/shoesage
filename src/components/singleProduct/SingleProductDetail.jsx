@@ -16,6 +16,7 @@ const SingleProductDetail = () => {
   let { productid } = useParams();
 
   let getProduct = async () => {
+    setLoading(true);
     try {
       let fetchData = await fetch("/api/products");
       let response = await fetchData.json();
@@ -24,6 +25,7 @@ const SingleProductDetail = () => {
       );
       setProductDetail(findProduct);
       setLoading(false);
+      setCurrentLink({ index: 0, currentLink: "" });
     } catch (e) {
       console.log(e);
     }
