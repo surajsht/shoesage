@@ -4,9 +4,14 @@ import "./singleProductDetail.css";
 import SingleProductLoader from "../loader/singleProductLoader/SingleProductLoader";
 
 const SingleProductDetail = () => {
+  let initialValue = {
+    index: 0,
+    currentLink: "",
+  };
+
   let [productDetail, setProductDetail] = useState([]);
   let [loading, setLoading] = useState(true);
-  let [currentImgLink, setCurrentLink] = useState("");
+  let [currentImgLink, setCurrentLink] = useState(initialValue);
 
   let { productid } = useParams();
 
@@ -36,7 +41,9 @@ const SingleProductDetail = () => {
     <div className="single-product-container">
       <div className="single-product-images">
         <img
-          src={currentImgLink === "" ? img : currentImgLink}
+          src={
+            currentImgLink.currentLink === "" ? img : currentImgLink.currentLink
+          }
           alt="product-image"
         />
         <div className="product-extra-images">
@@ -46,12 +53,10 @@ const SingleProductDetail = () => {
                 src={imgLink}
                 alt="product-image"
                 key={idx}
-                className={
-                  currentImgLink === ""
-                    ? idx === 0 && "active"
-                    : currentImgLink === imgLink && "active"
+                className={currentImgLink.index === idx ? "active" : ""}
+                onMouseEnter={() =>
+                  setCurrentLink({ index: idx, currentLink: imgLink })
                 }
-                onMouseEnter={() => setCurrentLink(imgLink)}
               />
             );
           })}
