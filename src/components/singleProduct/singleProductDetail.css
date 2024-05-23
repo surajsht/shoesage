@@ -76,10 +76,56 @@
   margin-top: 1.2rem;
 }
 
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 1.6rem;
+}
+
+.product-quantity form {
+  display: flex;
+  align-items: center;
+}
+
+.product-quantity form button {
+  font-size: 2.5rem;
+  height: 4rem;
+  width: 4.8rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product-quantity form button:hover,
+.product-quantity form button:focus {
+  background-color: #cecece;
+}
+
+.product-quantity form input {
+  font-size: 2rem;
+  height: 4rem;
+  width: 8rem;
+  border: 0;
+  outline: 0;
+  padding: 0.8rem;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+.product-quantity form input::-webkit-outer-spin-button,
+.product-quantity form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-quantity form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .product-btn-group {
   display: flex;
   gap: 1.6rem;
-  margin-top: 3.2rem;
+  margin-top: 4rem;
 }
 
 .product-btn-group button {

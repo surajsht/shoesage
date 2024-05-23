@@ -22,6 +22,7 @@ const SingleProductLoader = () => {
             <div className="singleProduct-loader-item"></div>
             <div className="singleProduct-loader-item"></div>
             <div className="singleProduct-loader-item"></div>
+            <div className="singleProduct-loader-item"></div>
           </div>
         </div>
       </div>

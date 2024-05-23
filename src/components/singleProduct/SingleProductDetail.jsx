@@ -71,6 +71,16 @@ const SingleProductDetail = () => {
         <p className="product-detail-description"> {description} </p>
         <span className="product-detail-price"> Rs.{price} </span>
 
+        <div className="product-quantity">
+          <h2> Quantity: </h2>
+
+          <form>
+            <button> + </button>
+            <input type="number" />
+            <button> - </button>
+          </form>
+        </div>
+
         <div className="product-btn-group">
           <button className="secondary-btn"> Add to cart </button>
           <button className="secondary-btn outlined"> Add to Wishlist </button>
