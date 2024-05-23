@@ -1,0 +1,93 @@
+.nav-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid #000;
+}
+
+.nav-content > svg {
+  font-size: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .nav-content > svg {
+    display: none;
+  }
+}
+
+.nav-content a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-content a:hover,
+.nav-content a:focus {
+  color: var(--primary-color);
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.nav-items-container,
+.nav-links,
+.nav-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.14);
+    z-index: 999;
+  }
+}
+
+.nav-items-container {
+  gap: 2.4rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-items-container svg {
+  vertical-align: middle;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.wishlist,
+.cart {
+  position: relative;
+}
+
+.wishlist .wishlist-count,
+.cart .cart-count {
+  position: absolute;
+  top: -0.4rem;
+  right: -1rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  color: #fff;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
