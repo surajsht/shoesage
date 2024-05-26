@@ -84,7 +84,7 @@ const Navbar = () => {
               <div className="cart" ref={cartRef}>
                 <FaShoppingCart
                   className="cart-icon"
-                  onClick={() => setOpenCart(true)}
+                  onClick={() => setOpenCart(!openCart)}
                 />
                 <div className="cart-count">{cart.length}</div>
                 <Cart />

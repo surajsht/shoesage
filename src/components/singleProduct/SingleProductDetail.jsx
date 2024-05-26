@@ -119,8 +119,7 @@ const SingleProductDetail = () => {
               addTowishList({ id, title, img, price, productQuantity })
             }
           >
-            {" "}
-            Add to Wishlist{" "}
+            Add to Wishlist
           </button>
         </div>
       </div>
