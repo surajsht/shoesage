@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { GrFormClose } from "react-icons/gr";
+import { useCon } from "../../context/Context";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -23,6 +24,8 @@ const Navbar = () => {
     navLinkRefContainer.current.style.boxShadow = "none";
     setOffcanvas(false);
   };
+
+  let { cart, wishList } = useCon();
 
   return (
     <nav>
@@ -55,12 +58,12 @@ const Navbar = () => {
             <div className="nav-icon-group">
               <div className="wishlist">
                 <FaHeart />
-                <span className="wishlist-count">0</span>
+                <span className="wishlist-count">{wishList.length}</span>
               </div>
 
               <div className="cart">
                 <FaShoppingCart />
-                <div className="cart-count">0</div>
+                <div className="cart-count">{cart.length}</div>
               </div>
             </div>
           </div>

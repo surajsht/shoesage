@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./singleProductDetail.css";
 import SingleProductLoader from "../loader/singleProductLoader/SingleProductLoader";
+import { useCon } from "../../context/Context";
 
 const SingleProductDetail = () => {
   let initialValue = {
@@ -12,6 +13,9 @@ const SingleProductDetail = () => {
   let [productDetail, setProductDetail] = useState([]);
   let [loading, setLoading] = useState(true);
   let [currentImgLink, setCurrentLink] = useState(initialValue);
+  let [productQuantity, setProductQuantity] = useState(1);
+
+  let { addToCart, addTowishList } = useCon();
 
   let { productid } = useParams();
 
@@ -35,9 +39,18 @@ const SingleProductDetail = () => {
     getProduct();
   }, [productid]);
 
+  let incDecQuantity = (str) => {
+    if (str === "increase") {
+      setProductQuantity(Number(productQuantity) + 1);
+    } else {
+      setProductQuantity(Number(productQuantity) - 1);
+    }
+  };
+
   if (loading) return <SingleProductLoader />;
 
-  let { title, category, img, description, extraImg, price } = productDetail;
+  let { id, title, category, img, description, extraImg, price } =
+    productDetail;
 
   return (
     <div className="single-product-container">
@@ -74,16 +87,41 @@ const SingleProductDetail = () => {
         <div className="product-quantity">
           <h2> Quantity: </h2>
 
-          <form>
-            <button> + </button>
-            <input type="number" />
-            <button> - </button>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <button onClick={() => incDecQuantity("increase")}> + </button>
+            <input
+              type="number"
+              value={productQuantity}
+              onChange={(e) => setProductQuantity(e.target.value)}
+              min="1"
+            />
+            <button
+              onClick={() => incDecQuantity("decrease")}
+              disabled={productQuantity <= 1}
+            >
+              -
+            </button>
           </form>
         </div>
 
         <div className="product-btn-group">
-          <button className="secondary-btn"> Add to cart </button>
-          <button className="secondary-btn outlined"> Add to Wishlist </button>
+          <button
+            className="secondary-btn"
+            onClick={() =>
+              addToCart({ id, title, img, price, productQuantity })
+            }
+          >
+            Add to cart
+          </button>
+          <button
+            className="secondary-btn outlined"
+            onClick={() =>
+              addTowishList({ id, title, img, price, productQuantity })
+            }
+          >
+            {" "}
+            Add to Wishlist{" "}
+          </button>
         </div>
       </div>
     </div>
