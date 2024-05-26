@@ -1,3 +1,4 @@
+import Cart from "../components/cart/Cart";
 import Featured from "../components/featured/Featured";
 import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";

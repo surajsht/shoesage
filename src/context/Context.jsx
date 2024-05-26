@@ -7,6 +7,7 @@ export const Context = ({ children }) => {
   let [loading, setLoading] = useState(true);
   let [cart, setCart] = useState([]);
   let [wishList, setWishList] = useState([]);
+  let [openCart, setOpenCart] = useState(false);
 
   let fetchData = async () => {
     try {
@@ -52,6 +53,8 @@ export const Context = ({ children }) => {
     cart,
     addTowishList,
     wishList,
+    setOpenCart,
+    openCart,
   };
 
   return (

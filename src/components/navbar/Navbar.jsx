@@ -1,15 +1,19 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { GrFormClose } from "react-icons/gr";
 import { useCon } from "../../context/Context";
 import "./navbar.css";
+import Cart from "../cart/Cart";
 
 const Navbar = () => {
   let [offcanvas, setOffcanvas] = useState(false);
   let navLinkRefContainer = useRef(null);
   let navLinkRef = useRef(null);
+  let cartRef = useRef(null);
+
+  let { cart, wishList, setOpenCart, openCart } = useCon();
 
   let openOffcanvasMenu = () => {
     let navLinkHeight = navLinkRef.current.offsetHeight;
@@ -25,7 +29,23 @@ const Navbar = () => {
     setOffcanvas(false);
   };
 
-  let { cart, wishList } = useCon();
+  let handleClickOutside = (e) => {
+    if (cartRef.current && !cartRef.current.contains(e.target)) {
+      setOpenCart(false);
+    }
+  };
+
+  useEffect(() => {
+    if (openCart) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openCart]);
 
   return (
     <nav>
@@ -61,9 +81,13 @@ const Navbar = () => {
                 <span className="wishlist-count">{wishList.length}</span>
               </div>
 
-              <div className="cart">
-                <FaShoppingCart />
+              <div className="cart" ref={cartRef}>
+                <FaShoppingCart
+                  className="cart-icon"
+                  onClick={() => setOpenCart(true)}
+                />
                 <div className="cart-count">{cart.length}</div>
+                <Cart />
               </div>
             </div>
           </div>
