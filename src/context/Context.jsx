@@ -8,6 +8,7 @@ export const Context = ({ children }) => {
   let [cart, setCart] = useState([]);
   let [wishList, setWishList] = useState([]);
   let [openCart, setOpenCart] = useState(false);
+  let [openWishList, setOpenWishList] = useState(false);
 
   let fetchData = async () => {
     try {
@@ -28,8 +29,6 @@ export const Context = ({ children }) => {
     } else {
       alert("Product is already in cart.");
     }
-
-    console.log(cart);
   };
 
   let addTowishList = (data) => {
@@ -55,6 +54,8 @@ export const Context = ({ children }) => {
     wishList,
     setOpenCart,
     openCart,
+    setOpenWishList,
+    openWishList,
   };
 
   return (

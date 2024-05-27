@@ -6,14 +6,17 @@ import { GrFormClose } from "react-icons/gr";
 import { useCon } from "../../context/Context";
 import "./navbar.css";
 import Cart from "../cart/Cart";
+import WishList from "../wishList/WishList";
 
 const Navbar = () => {
   let [offcanvas, setOffcanvas] = useState(false);
   let navLinkRefContainer = useRef(null);
   let navLinkRef = useRef(null);
   let cartRef = useRef(null);
+  let wishListRef = useRef(null);
 
-  let { cart, wishList, setOpenCart, openCart } = useCon();
+  let { cart, wishList, setOpenCart, openCart, setOpenWishList, openWishList } =
+    useCon();
 
   let openOffcanvasMenu = () => {
     let navLinkHeight = navLinkRef.current.offsetHeight;
@@ -47,6 +50,24 @@ const Navbar = () => {
     };
   }, [openCart]);
 
+  let handleClickOutsideWishList = (e) => {
+    if (wishListRef.current && !wishListRef.current.contains(e.target)) {
+      setOpenWishList(false);
+    }
+  };
+
+  useEffect(() => {
+    if (openWishList) {
+      document.addEventListener("mousedown", handleClickOutsideWishList);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutsideWishList);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideWishList);
+    };
+  }, [openWishList]);
+
   return (
     <nav>
       <div className="wrapper">
@@ -76,9 +97,10 @@ const Navbar = () => {
             </div>
 
             <div className="nav-icon-group">
-              <div className="wishlist">
-                <FaHeart />
+              <div className="wishlist" ref={wishListRef}>
+                <FaHeart onClick={() => setOpenWishList(!openWishList)} />
                 <span className="wishlist-count">{wishList.length}</span>
+                <WishList />
               </div>
 
               <div className="cart" ref={cartRef}>
