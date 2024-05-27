@@ -8,7 +8,7 @@ const Cart = () => {
   return (
     <div className={`cart-container ${openCart ? "active" : ""}`}>
       {cart.map((item) => {
-        let { id, img, title, price } = item;
+        let { id, img, title, price, productQuantity } = item;
 
         return (
           <div key={id} className="cart-item">
@@ -16,13 +16,20 @@ const Cart = () => {
 
             <div className="cart-detail">
               <h2 className="cart-item-title">{title}</h2>
-              <span> Rs.{price} </span>
+
+              <span>
+                Rs.{price} * {productQuantity}
+              </span>
             </div>
           </div>
         );
       })}
 
-      <Link className="secondary-btn" onClick={() => setOpenCart(false)}>
+      <Link
+        to="/cart"
+        className="secondary-btn"
+        onClick={() => setOpenCart(false)}
+      >
         Goto cart page
       </Link>
     </div>

@@ -88,19 +88,19 @@ const SingleProductDetail = () => {
           <h2> Quantity: </h2>
 
           <form onSubmit={(e) => e.preventDefault()}>
-            <button onClick={() => incDecQuantity("increase")}> + </button>
-            <input
-              type="number"
-              value={productQuantity}
-              onChange={(e) => setProductQuantity(e.target.value)}
-              min="1"
-            />
             <button
               onClick={() => incDecQuantity("decrease")}
               disabled={productQuantity <= 1}
             >
               -
             </button>
+            <input
+              type="number"
+              value={productQuantity}
+              onChange={(e) => setProductQuantity(e.target.value)}
+              min="1"
+            />
+            <button onClick={() => incDecQuantity("increase")}> + </button>
           </form>
         </div>
 
