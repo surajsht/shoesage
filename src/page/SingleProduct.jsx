@@ -1,7 +1,6 @@
 import SingleProductDetail from "../components/singleProduct/SingleProductDetail";
 import Recommended from "../components/recommemded/Recommended";
 import Navbar from "../components/navbar/Navbar";
-import Cart from "../components/cart/Cart";
 
 const SingleProduct = () => {
   return (

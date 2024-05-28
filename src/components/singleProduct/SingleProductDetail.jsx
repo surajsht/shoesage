@@ -108,7 +108,7 @@ const SingleProductDetail = () => {
           <button
             className="secondary-btn"
             onClick={() =>
-              addToCart({ id, title, img, price, productQuantity })
+              addToCart({ id, title, img, price, productQuantity, category })
             }
           >
             Add to cart
