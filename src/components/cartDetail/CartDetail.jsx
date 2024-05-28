@@ -11,7 +11,7 @@ const CartDetail = () => {
         </div>
 
         <div className="cart-body">
-          <div className="cart-body-container">
+          <div className="cart-body-left">
             <CartProduct />
           </div>
           <CartPricing />
