@@ -50,6 +50,7 @@ export const Context = ({ children }) => {
     loading,
     addToCart,
     cart,
+    setCart,
     addTowishList,
     wishList,
     setOpenCart,

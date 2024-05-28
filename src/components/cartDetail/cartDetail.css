@@ -37,12 +37,12 @@
 
 .cart-product-header > div:where(:nth-child(2), :nth-child(4)),
 .cart-product-item > div:where(:nth-child(2), :nth-child(4)) {
-  width: calc((100% - 60% - 15%) / 4);
+  width: calc((100% - 60% - 10%) / 4);
 }
 
 .cart-product-header > div:nth-child(3),
 .cart-product-item > div:nth-child(3) {
-  width: 15% !important;
+  width: 10% !important;
 }
 
 .cart-product-header > div:last-child,
@@ -77,6 +77,10 @@
 .cart-product-quantity button {
   font-size: 18px;
   cursor: pointer;
+}
+
+.cart-product-total-price {
+  word-wrap: wrap;
 }
 
 .cart-product-delete button {

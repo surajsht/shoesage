@@ -1,7 +1,27 @@
 import { useCon } from "../../context/Context";
 
 const CartProduct = () => {
-  let { cart } = useCon();
+  let { cart, setCart } = useCon();
+
+  let deleteCartProduct = (id) => {
+    let filterData = cart.filter((item, idx) => item.id !== id);
+    setCart(filterData);
+  };
+
+  let cartIncOrDec = (id, command) => {
+    let updateCart = cart.map((item) => {
+      if (item.id === id) {
+        if (command === "increase") {
+          return { ...item, productQuantity: item.productQuantity + 1 };
+        } else if (command === "decrease") {
+          return { ...item, productQuantity: item.productQuantity - 1 };
+        }
+      }
+      return item;
+    });
+
+    setCart(updateCart);
+  };
 
   return (
     <>
@@ -27,15 +47,22 @@ const CartProduct = () => {
                 </div>
               </div>
 
-              <div>Rs{price}</div>
+              <div className="cart-product-price">Rs{price}</div>
               <div className="cart-product-quantity">
-                <button> + </button>
+                <button onClick={() => cartIncOrDec(id, "increase")}>+</button>
                 <p>{productQuantity}</p>
-                <button> - </button>
+                <button
+                  onClick={() => cartIncOrDec(id, "decrease")}
+                  disabled={productQuantity <= 1}
+                >
+                  -
+                </button>
               </div>
-              <div> {productQuantity * price} </div>
+              <div className="cart-product-total-price">
+                Rs.{productQuantity * price}
+              </div>
               <div className="cart-product-delete">
-                <button>x</button>
+                <button onClick={() => deleteCartProduct(id)}>x</button>
               </div>
             </div>
           );
