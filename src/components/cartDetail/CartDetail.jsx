@@ -1,6 +1,7 @@
 import CartPricing from "./CartPricing";
 import CartProduct from "./CartProduct";
 import "./cartDetail.css";
+import Recommended from "../recommemded/Recommended";
 
 const CartDetail = () => {
   return (
@@ -16,6 +17,8 @@ const CartDetail = () => {
           </div>
           <CartPricing />
         </div>
+
+        <Recommended />
       </div>
     </div>
   );

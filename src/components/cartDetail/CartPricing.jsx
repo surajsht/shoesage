@@ -1,4 +1,21 @@
+import { useEffect, useState } from "react";
+import { useCon } from "../../context/Context";
+
 const CartPricing = () => {
+  let [subTotal, setSubTotal] = useState(0);
+
+  let { cart } = useCon();
+
+  useEffect(() => {
+    let findSubTotal = cart.reduce((acc, curr) => {
+      let { price, productQuantity } = curr;
+
+      return (acc += price * productQuantity);
+    }, 0);
+
+    setSubTotal(findSubTotal);
+  }, [cart]);
+
   return (
     <div className="cart-body-right">
       <div className="cart-pricing-details">
@@ -7,7 +24,7 @@ const CartPricing = () => {
         <div className="cart-price-calculation">
           <div>
             <span> Subtotal </span>
-            <span> Rs.300 </span>
+            <span> Rs.{subTotal} </span>
           </div>
 
           <div>
@@ -18,7 +35,7 @@ const CartPricing = () => {
 
         <div className="cart-pricing-total">
           <span> Total </span>
-          <span> Rs.1000 </span>
+          <span> Rs.{subTotal + 100} </span>
         </div>
       </div>
 
