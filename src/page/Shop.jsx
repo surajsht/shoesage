@@ -1,10 +1,11 @@
-import Cart from "../components/cart/Cart";
 import Navbar from "../components/navbar/Navbar";
+import ShopDetail from "../components/shop/ShopDetail";
 
 const Shop = () => {
   return (
     <>
       <Navbar />
+      <ShopDetail />
     </>
   );
 };
