@@ -1,5 +1,6 @@
-import ShopProducts from "./ShopProducts";
-import ShopSort from "./ShopSort";
+import ShopProducts from "../shopProducts/ShopProducts";
+import ShopSort from "../shopSort/ShopSort";
+import "./shop.css";
 
 const ShopDetail = () => {
   return (
