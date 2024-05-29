@@ -1,17 +1,30 @@
 import { CiGrid2H } from "react-icons/ci";
 import { TfiLayoutGrid2 } from "react-icons/tfi";
 import { IoIosArrowDown } from "react-icons/io";
+import { useCon } from "../../context/Context";
 import "./shopSort.css";
 
 const ShopSort = () => {
+  let { setGridOption, gridOption } = useCon();
+
+  let handleIconClick = (gridLabel) => {
+    setGridOption(gridLabel);
+  };
+
   return (
     <div className="sort-container">
       <div className="view-as">
         <span className="sort-title"> View As </span>
 
         <div className="view-as-icon-container">
-          <CiGrid2H />
-          <TfiLayoutGrid2 />
+          <CiGrid2H
+            onClick={() => handleIconClick("single-layout-grid")}
+            className={`${gridOption === "single-layout-grid" ? "active" : ""}`}
+          />
+          <TfiLayoutGrid2
+            onClick={() => handleIconClick("double-layout-grid")}
+            className={`${gridOption === "double-layout-grid" ? "active" : ""}`}
+          />
         </div>
       </div>
 

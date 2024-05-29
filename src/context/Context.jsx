@@ -9,6 +9,7 @@ export const Context = ({ children }) => {
   let [wishList, setWishList] = useState([]);
   let [openCart, setOpenCart] = useState(false);
   let [openWishList, setOpenWishList] = useState(false);
+  let [gridOption, setGridOption] = useState("single-layout-grid");
 
   let fetchData = async () => {
     try {
@@ -57,6 +58,8 @@ export const Context = ({ children }) => {
     openCart,
     setOpenWishList,
     openWishList,
+    gridOption,
+    setGridOption,
   };
 
   return (

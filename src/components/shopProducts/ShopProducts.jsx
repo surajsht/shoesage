@@ -1,22 +1,23 @@
 import { useCon } from "../../context/Context";
+import "./shopProducts.css";
 
 const ShopProducts = () => {
-  let { apiData } = useCon();
+  let { apiData, gridOption } = useCon();
 
   return (
-    <div className="shop-product-container">
+    <div className={`shop-product-container ${gridOption}`}>
       {apiData.map((item) => {
         let { id, category, description, img, price, title } = item;
 
         return (
-          <div key={id}>
+          <div key={id} className="shop-product-item">
             <img src={img} alt="product-item" />
 
             <div className="product-detail">
-              <h2 className="product-title"> {title} </h2>
+              <h2 className="shop-product-title"> {title} </h2>
               <span> {category} </span>
               <p> {description} </p>
-              <span> {price} </span>
+              <span className="shop-product-price"> Rs.{price} </span>
             </div>
           </div>
         );

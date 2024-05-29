@@ -7,8 +7,12 @@ const ShopDetail = () => {
     <div className="shop-detail-container">
       <div className="wrapper">
         <div className="shop-content">
-          <ShopSort />
-          <ShopProducts />
+          <div className="shop-content-left"></div>
+
+          <div className="shop-content-right">
+            <ShopSort />
+            <ShopProducts />
+          </div>
         </div>
       </div>
     </div>

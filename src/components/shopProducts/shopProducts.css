@@ -1,0 +1,100 @@
+.shop-product-container {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.shop-product-container.single-layout-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 767px) {
+  .shop-product-container.single-layout-grid {
+    gap: 4rem;
+  }
+}
+
+.shop-product-container.single-layout-grid .shop-product-item {
+  display: flex;
+  gap: 2.4rem;
+}
+
+@media (max-width: 767px) {
+  .shop-product-container.single-layout-grid .shop-product-item {
+    flex-direction: column;
+  }
+}
+
+.shop-product-container.single-layout-grid .shop-product-item img {
+  width: auto;
+  height: 36rem;
+  object-fit: contain;
+}
+
+.shop-product-container.single-layout-grid .shop-product-item .product-detail {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .shop-product-container.single-layout-grid .shop-product-item img,
+  .shop-product-container.single-layout-grid
+    .shop-product-item
+    .product-detail {
+    width: 100%;
+  }
+
+  .shop-product-container.single-layout-grid .shop-product-item img {
+    object-fit: cover;
+  }
+}
+
+.shop-product-container.single-layout-grid
+  .shop-product-item
+  .product-detail
+  > *:not(:last-child) {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.shop-product-container.single-layout-grid .shop-product-title,
+.shop-product-container.double-layout-grid .shop-product-title {
+  font-size: 2.8rem;
+}
+
+.shop-product-container.single-layout-grid .shop-product-price,
+.shop-product-container.double-layout-grid .shop-product-price {
+  font-size: 1, 8rem;
+  font-weight: 800;
+}
+
+.shop-product-container.double-layout-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 767px) {
+  .shop-product-container.double-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+}
+
+.shop-product-container.double-layout-grid .shop-product-item img {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .shop-product-container.double-layout-grid .shop-product-item img {
+    height: 36rem;
+    object-fit: cover;
+  }
+}
+
+.shop-product-container.double-layout-grid
+  .shop-product-item
+  > *:not(:last-child),
+.shop-product-container.double-layout-grid
+  .shop-product-item
+  .product-detail
+  > *:not(:last-child) {
+  display: block;
+  margin-bottom: 0.8rem;
+}
