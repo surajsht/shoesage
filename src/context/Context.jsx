@@ -10,6 +10,7 @@ export const Context = ({ children }) => {
   let [openCart, setOpenCart] = useState(false);
   let [openWishList, setOpenWishList] = useState(false);
   let [gridOption, setGridOption] = useState("single-layout-grid");
+  let [sortOptionLabel, setOptionLabel] = useState("Select");
 
   let fetchData = async () => {
     try {
@@ -42,6 +43,27 @@ export const Context = ({ children }) => {
     }
   };
 
+  const handleSort = (e) => {
+    const targetClassName = e.target.className;
+
+    const sortedData = [...apiData].sort((a, b) => {
+      if (targetClassName.includes("a-z")) {
+        return a.title.localeCompare(b.title);
+      } else if (targetClassName.includes("z-a")) {
+        return b.title.localeCompare(a.title);
+      } else if (targetClassName.includes("low-to-high")) {
+        return a.price - b.price;
+      } else if (targetClassName.includes("high-to-low")) {
+        return b.price - a.price;
+      } else {
+        return 0;
+      }
+    });
+
+    setApiData(sortedData);
+    setOptionLabel(e.target.textContent);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -61,6 +83,8 @@ export const Context = ({ children }) => {
     openWishList,
     gridOption,
     setGridOption,
+    sortOptionLabel,
+    handleSort,
   };
 
   return (

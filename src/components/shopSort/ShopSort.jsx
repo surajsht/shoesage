@@ -8,9 +8,8 @@ import "./shopSort.css";
 const ShopSort = () => {
   let [sortOption, setSortOption] = useState(false);
   let sortOptionRef = useRef(null);
-  let [sortOptionLabel, setOptionLabel] = useState("Select");
 
-  let { setGridOption, gridOption, apiData, setApiData } = useCon();
+  let { setGridOption, gridOption, sortOptionLabel, handleSort } = useCon();
 
   let handleIconClick = (gridLabel) => {
     setGridOption(gridLabel);
@@ -32,27 +31,6 @@ const ShopSort = () => {
     return () =>
       document.removeEventListener("mousedown", handleClickOutsideGrid);
   }, [sortOption]);
-
-  const handleSort = (e) => {
-    const targetClassName = e.target.className;
-
-    const sortedData = [...apiData].sort((a, b) => {
-      if (targetClassName.includes("a-z")) {
-        return a.title.localeCompare(b.title);
-      } else if (targetClassName.includes("z-a")) {
-        return b.title.localeCompare(a.title);
-      } else if (targetClassName.includes("low-to-high")) {
-        return a.price - b.price;
-      } else if (targetClassName.includes("high-to-low")) {
-        return b.price - a.price;
-      } else {
-        return 0;
-      }
-    });
-
-    setApiData(sortedData);
-    setOptionLabel(e.target.textContent);
-  };
 
   return (
     <div className="sort-container">
