@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCon } from "../../context/Context";
 import "./shopProducts.css";
 
@@ -14,7 +15,9 @@ const ShopProducts = () => {
             <img src={img} alt="product-item" />
 
             <div className="product-detail">
-              <h2 className="shop-product-title"> {title} </h2>
+              <h2 className="shop-product-title">
+                <Link to={`/product/${id}`}> {title} </Link>
+              </h2>
               <span> {category} </span>
               <p> {description} </p>
               <span className="shop-product-price"> Rs.{price} </span>
