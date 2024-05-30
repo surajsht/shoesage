@@ -48,6 +48,7 @@ export const Context = ({ children }) => {
 
   const contextValue = {
     apiData,
+    setApiData,
     loading,
     addToCart,
     cart,
