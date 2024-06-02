@@ -2,6 +2,16 @@
   margin-top: 2.4rem;
 }
 
+@media (max-width: 991px) {
+  .categories-list-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
 .categories-list-container > div {
   text-transform: capitalize;
   margin-bottom: 1.2rem;
