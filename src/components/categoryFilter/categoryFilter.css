@@ -1,0 +1,13 @@
+.categories-list-container {
+  margin-top: 2.4rem;
+}
+
+.categories-list-container > div {
+  text-transform: capitalize;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+
+.categories-list-container > div.active {
+  color: var(--primary-color);
+}

@@ -4,6 +4,7 @@ let createCon = createContext();
 
 export const Context = ({ children }) => {
   let [apiData, setApiData] = useState([]);
+  let [backUpApiData, setBackUpApiData] = useState([]);
   let [loading, setLoading] = useState(true);
   let [cart, setCart] = useState([]);
   let [wishList, setWishList] = useState([]);
@@ -17,6 +18,7 @@ export const Context = ({ children }) => {
       let fetchApi = await fetch("/api/products");
       let response = await fetchApi.json();
       setApiData(response.products);
+      setBackUpApiData(response.products);
       setLoading(false);
     } catch (e) {
       console.log(e);
@@ -85,6 +87,8 @@ export const Context = ({ children }) => {
     setGridOption,
     sortOptionLabel,
     handleSort,
+    backUpApiData,
+    setBackUpApiData,
   };
 
   return (
