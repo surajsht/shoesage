@@ -18,16 +18,6 @@
   }
 }
 
-.nav-content a {
-  color: #000;
-  text-decoration: none;
-}
-
-.nav-content a:hover,
-.nav-content a:focus {
-  color: var(--primary-color);
-}
-
 .logo {
   font-size: 2.5rem;
 }

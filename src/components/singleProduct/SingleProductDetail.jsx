@@ -104,7 +104,7 @@ const SingleProductDetail = () => {
           </form>
         </div>
 
-        <div className="product-btn-group">
+        <div className="btn-group">
           <button
             className="secondary-btn"
             onClick={() =>
@@ -116,7 +116,15 @@ const SingleProductDetail = () => {
           <button
             className="secondary-btn outlined"
             onClick={() =>
-              addTowishList({ id, title, img, price, productQuantity })
+              addTowishList({
+                id,
+                title,
+                img,
+                price,
+                productQuantity,
+                category,
+                description,
+              })
             }
           >
             Add to Wishlist

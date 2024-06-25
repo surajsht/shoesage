@@ -12,6 +12,16 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-color) !important;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
@@ -35,7 +45,6 @@ h6 {
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 600;
-  text-decoration: none;
   transition: 0.4s;
 }
 
@@ -47,7 +56,7 @@ h6 {
 
 .primary-btn:hover,
 .primary-btn:focus {
-  color: #fff;
+  color: #fff !important;
   border-color: #ed3233;
 }
 
@@ -79,6 +88,7 @@ h6 {
 
 .secondary-btn:hover,
 .secondary-btn:focus {
+  color: #fff !important;
   background-color: #000;
 }
 
@@ -172,4 +182,33 @@ h6 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 4rem;
+}
+
+.btn-group button {
+  padding: 1.6rem 4rem;
+}
+
+.line-clamp {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-5 {
+  -webkit-line-clamp: 5;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  font-weight: 600;
 }

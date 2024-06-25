@@ -39,7 +39,7 @@ const RecommendedList = () => {
             <Link to={`/product/${id}`} className="recommended-item-title">
               {title}
             </Link>
-            <span className="recommended-item-price"> Rs.{price} </span>
+            <span className="product-price"> Rs.{price} </span>
           </div>
         );
       })}

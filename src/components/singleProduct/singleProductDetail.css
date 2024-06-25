@@ -121,13 +121,3 @@
 .product-quantity form input[type="number"] {
   -moz-appearance: textfield;
 }
-
-.product-btn-group {
-  display: flex;
-  gap: 1.6rem;
-  margin-top: 4rem;
-}
-
-.product-btn-group button {
-  padding: 1.6rem 4rem;
-}

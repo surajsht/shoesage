@@ -44,18 +44,6 @@
 
 .recommended-item-title {
   display: block;
-  text-decoration: none;
-  color: #000;
   font-size: 1.8rem;
   margin: 0.2rem 0;
-}
-
-.recommended-item-title:hover,
-.recommended-item-title:focus {
-  color: var(--primary-color);
-}
-
-.recommended-item-price {
-  font-size: 1.8rem;
-  font-weight: 500;
 }

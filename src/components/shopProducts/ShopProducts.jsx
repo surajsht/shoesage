@@ -19,8 +19,8 @@ const ShopProducts = () => {
                 <Link to={`/product/${id}`}> {title} </Link>
               </h2>
               <span className="shop-product-category"> {category} </span>
-              <p> {description} </p>
-              <span className="shop-product-price"> Rs.{price} </span>
+              <p className="line-clamp line-clamp-5"> {description} </p>
+              <span className="product-price"> Rs.{price} </span>
             </div>
           </div>
         );

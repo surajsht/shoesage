@@ -34,7 +34,7 @@ const FeaturedList = () => {
             <Link to={`/product/${id}`} className="featured-item-title">
               {title}
             </Link>
-            <span className="featured-item-price"> Rs.{price} </span>
+            <span className="product-price"> Rs.{price} </span>
           </div>
         );
       })}
