@@ -5,8 +5,8 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
 import { GrFormClose } from "react-icons/gr";
 import { useCon } from "../../context/Context";
 import "./navbar.css";
-import Cart from "../cart/Cart";
-import WishList from "../wishList/WishList";
+import CartPopup from "../cartPopup/CartPopup";
+import WishListPopup from "../wishListPopup/WishListPopup";
 
 const Navbar = () => {
   let [offcanvas, setOffcanvas] = useState(false);
@@ -97,24 +97,20 @@ const Navbar = () => {
             </div>
 
             <div className="nav-icon-group">
-              <div
-                className="wishlist"
-                ref={wishListRef}
-                onClick={() => setOpenWishList(!openWishList)}
-              >
-                <FaHeart />
-                <span className="wishlist-count">{wishList.length}</span>
-                <WishList />
+              <div className="wishlist" ref={wishListRef}>
+                <FaHeart onClick={() => setOpenWishList(!openWishList)} />
+                {wishList.length > 0 && (
+                  <span className="wishlist-count">{wishList.length}</span>
+                )}
+                <WishListPopup />
               </div>
 
-              <div
-                className="cart"
-                ref={cartRef}
-                onClick={() => setOpenCart(!openCart)}
-              >
-                <FaShoppingCart className="cart-icon" />
-                <div className="cart-count">{cart.length}</div>
-                <Cart />
+              <div className="cart" ref={cartRef}>
+                <FaShoppingCart onClick={() => setOpenCart(!openCart)} />
+                {cart.length > 0 && (
+                  <span className="cart-count">{cart.length}</span>
+                )}
+                <CartPopup />
               </div>
             </div>
           </div>

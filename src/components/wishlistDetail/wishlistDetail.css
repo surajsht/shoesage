@@ -27,8 +27,8 @@
 }
 
 .wishlist-product-item:not(:last-child) {
-  margin-bottom: 2.4rem;
-  padding-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
+  padding-bottom: 3.2rem;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.6);
 }
 

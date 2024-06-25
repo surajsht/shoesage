@@ -74,15 +74,17 @@
   color: var(--primary-color);
 }
 
-.wishlist,
-.cart {
-  position: relative;
+@media (min-width: 576px) {
+  .wishlist,
+  .cart {
+    position: relative;
+  }
 }
 
 .wishlist .wishlist-count,
 .cart .cart-count {
   position: absolute;
-  top: -0.4rem;
+  top: -1rem;
   right: -1rem;
   height: 1.8rem;
   width: 1.8rem;
