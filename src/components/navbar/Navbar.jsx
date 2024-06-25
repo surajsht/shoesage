@@ -98,18 +98,22 @@ const Navbar = () => {
 
             <div className="nav-icon-group">
               <div className="wishlist" ref={wishListRef}>
-                <FaHeart onClick={() => setOpenWishList(!openWishList)} />
-                {wishList.length > 0 && (
-                  <span className="wishlist-count">{wishList.length}</span>
-                )}
+                <div className="wishlist-icon">
+                  <FaHeart onClick={() => setOpenWishList(!openWishList)} />
+                  {wishList.length > 0 && (
+                    <span className="wishlist-count">{wishList.length}</span>
+                  )}
+                </div>
                 <WishListPopup />
               </div>
 
               <div className="cart" ref={cartRef}>
-                <FaShoppingCart onClick={() => setOpenCart(!openCart)} />
-                {cart.length > 0 && (
-                  <span className="cart-count">{cart.length}</span>
-                )}
+                <div className="cart-icon">
+                  <FaShoppingCart onClick={() => setOpenCart(!openCart)} />
+                  {cart.length > 0 && (
+                    <span className="cart-count">{cart.length}</span>
+                  )}
+                </div>
                 <CartPopup />
               </div>
             </div>

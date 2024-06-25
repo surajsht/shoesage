@@ -81,6 +81,11 @@
   }
 }
 
+.wishlist-icon,
+.cart-icon {
+  position: relative;
+}
+
 .wishlist .wishlist-count,
 .cart .cart-count {
   position: absolute;
