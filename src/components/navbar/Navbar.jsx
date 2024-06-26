@@ -78,44 +78,42 @@ const Navbar = () => {
             <HiBars3BottomLeft onClick={() => openOffcanvasMenu()} />
           )}
 
+          <div className="nav-links-container" ref={navLinkRefContainer}>
+            <ul className="nav-links" ref={navLinkRef}>
+              <li>
+                <NavLink to="/"> Home </NavLink>
+              </li>
+              <li>
+                <NavLink to="/shop"> Shop </NavLink>
+              </li>
+            </ul>
+          </div>
+
           <div className="logo">
             <h1>
               <Link to="/"> ShopEase </Link>
             </h1>
           </div>
 
-          <div className="nav-items-container">
-            <div className="nav-links-container" ref={navLinkRefContainer}>
-              <ul className="nav-links" ref={navLinkRef}>
-                <li>
-                  <NavLink to="/"> Home </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/shop"> Shop </NavLink>
-                </li>
-              </ul>
+          <div className="nav-icon-group">
+            <div className="wishlist" ref={wishListRef}>
+              <div className="wishlist-icon">
+                <FaHeart onClick={() => setOpenWishList(!openWishList)} />
+                {wishList.length > 0 && (
+                  <span className="wishlist-count">{wishList.length}</span>
+                )}
+              </div>
+              <WishListPopup />
             </div>
 
-            <div className="nav-icon-group">
-              <div className="wishlist" ref={wishListRef}>
-                <div className="wishlist-icon">
-                  <FaHeart onClick={() => setOpenWishList(!openWishList)} />
-                  {wishList.length > 0 && (
-                    <span className="wishlist-count">{wishList.length}</span>
-                  )}
-                </div>
-                <WishListPopup />
+            <div className="cart" ref={cartRef}>
+              <div className="cart-icon">
+                <FaShoppingCart onClick={() => setOpenCart(!openCart)} />
+                {cart.length > 0 && (
+                  <span className="cart-count">{cart.length}</span>
+                )}
               </div>
-
-              <div className="cart" ref={cartRef}>
-                <div className="cart-icon">
-                  <FaShoppingCart onClick={() => setOpenCart(!openCart)} />
-                  {cart.length > 0 && (
-                    <span className="cart-count">{cart.length}</span>
-                  )}
-                </div>
-                <CartPopup />
-              </div>
+              <CartPopup />
             </div>
           </div>
         </div>

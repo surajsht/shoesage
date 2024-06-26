@@ -22,7 +22,10 @@
   font-size: 2.5rem;
 }
 
-.nav-items-container,
+.logo h1 {
+  font-weight: 700;
+}
+
 .nav-links,
 .nav-icon-group {
   display: flex;
@@ -56,17 +59,20 @@
   }
 }
 
-.nav-items-container {
-  gap: 3.2rem;
+.nav-icon-group svg {
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-.nav-items-container svg {
   vertical-align: middle;
 }
 
+.nav-icon-group svg:hover,
+.nav-icon-group svg:focus {
+  color: var(--primary-color);
+}
+
 .nav-links li {
+  font-size: 1.8rem;
+  font-weight: 500;
   list-style: none;
 }
 
