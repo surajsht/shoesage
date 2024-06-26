@@ -334,6 +334,18 @@ createServer({
             img: "/shorts/shorts-two/shorts-two.webp",
             price: 1648,
           },
+          {
+            id: 2,
+            title: "Basic V-Neck T-Shirt",
+            img: "/tshirt/tshirt-two/tshirt-two.webp",
+            price: 998,
+          },
+          {
+            id: 7,
+            title: "Plain Half Shirt",
+            img: "/shirt/shirt-three/shirt-three.webp",
+            price: 1998,
+          },
         ],
       };
     });
