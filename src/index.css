@@ -114,18 +114,6 @@ h6 {
 
 @media (max-width: 1199px) {
   .wrapper {
-    max-width: 96rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .wrapper {
-    max-width: 84rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .wrapper {
     max-width: 100%;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
@@ -142,7 +130,7 @@ h6 {
   margin-left: -2.4rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .column-row {
     margin-left: -1.6rem;
     margin-right: -1.6rem;
@@ -157,7 +145,7 @@ h6 {
   padding-left: 2.4rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .column {
     padding-left: 1.6rem;
     padding-right: 1.6rem;

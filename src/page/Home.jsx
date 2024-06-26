@@ -3,6 +3,7 @@ import FollowUs from "../components/followUs/FollowUs";
 import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";
 import Newsletter from "../components/newsletter/Newsletter";
+import ServiceInfo from "../components/serviceInfo/ServiceInfo";
 import SpecialOffer from "../components/specialOffer/SpecialOffer";
 import FeaturedCategories from "../featuredCategories/FeaturedCategories";
 
@@ -16,6 +17,7 @@ const Home = () => {
       <Featured />
       <FollowUs />
       <Newsletter />
+      <ServiceInfo />
     </>
   );
 };
