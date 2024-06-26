@@ -1,3 +1,8 @@
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { GiReturnArrow } from "react-icons/gi";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { BiSupport } from "react-icons/bi";
+
 export const FeaturedCategoriesData = [
   {
     id: 0,
@@ -154,5 +159,32 @@ export const FollowUsData = [
         ],
       },
     ],
+  },
+];
+
+export const ServiceInfoData = [
+  {
+    id: 0,
+    icon: <LiaShippingFastSolid />,
+    title: "Free Shipping",
+    desc: "For all Orders Over $100",
+  },
+  {
+    id: 1,
+    icon: <GiReturnArrow />,
+    title: "30 Days Returns",
+    desc: "For an Exchange Product",
+  },
+  {
+    id: 2,
+    icon: <RiSecurePaymentLine />,
+    title: "Secured Payment",
+    desc: "Payment Cards Accepted",
+  },
+  {
+    id: 3,
+    icon: <BiSupport />,
+    title: "Support 24/7",
+    desc: "Contact us Anytime",
   },
 ];
