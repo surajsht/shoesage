@@ -1,25 +1,3 @@
-.special-offer-container {
-  margin: 12rem 0;
-}
-
-@media (max-width: 1199px) {
-  .special-offer-container {
-    margin: 8rem 0;
-  }
-}
-
-@media (max-width: 991px) {
-  .special-offer-container {
-    margin: 6rem 0;
-  }
-}
-
-@media (max-width: 575px) {
-  .special-offer-container {
-    margin: 4rem 0;
-  }
-}
-
 .special-offer-image {
   overflow: hidden;
   line-height: 0;

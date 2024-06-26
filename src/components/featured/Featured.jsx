@@ -4,7 +4,7 @@ import "./featured.css";
 
 const Featured = () => {
   return (
-    <section className="featured-section">
+    <section className="featured-section section-spacing">
       <div className="wrapper">
         <div className="featured-header">
           <h2 className="featured-title"> Featured Products </h2>

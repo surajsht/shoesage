@@ -3,7 +3,7 @@ import "./hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div className="hero-container section-spacing">
       <img src="/hero.webp" alt="hero-image" />
 
       <div className="hero-content-container">

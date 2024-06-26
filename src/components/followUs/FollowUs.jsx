@@ -4,7 +4,7 @@ import "./followUs.css";
 
 const FollowUs = () => {
   return (
-    <div className="follow-us-container">
+    <div className="follow-us-container section-spacing">
       {FollowUsData.map((item) => {
         let { id, data } = item;
 

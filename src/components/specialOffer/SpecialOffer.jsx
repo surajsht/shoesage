@@ -3,7 +3,7 @@ import "./specialOffer.css";
 
 const SpecialOffer = () => {
   return (
-    <div className="special-offer-container">
+    <div className="special-offer-container section-spacing">
       <div className="wrapper">
         <div className="special-offer-image">
           <Link to="/shop">

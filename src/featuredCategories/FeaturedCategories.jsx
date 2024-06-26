@@ -4,7 +4,7 @@ import "./featuredCategories.css";
 
 const FeaturedCategories = () => {
   return (
-    <div className="featured-categories-container">
+    <div className="featured-categories-container section-spacing">
       {FeaturedCategoriesData.map((item) => {
         let { id, title, desc, btnTxt, img, subTitle } = item;
 
