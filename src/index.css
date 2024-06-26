@@ -120,21 +120,15 @@ h6 {
 
 @media (max-width: 991px) {
   .wrapper {
-    max-width: 72rem;
+    max-width: 84rem;
   }
 }
 
 @media (max-width: 767px) {
   .wrapper {
-    max-width: 54rem;
+    max-width: 100%;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
-  }
-}
-
-@media (max-width: 575px) {
-  .wrapper {
-    max-width: 100%;
   }
 }
 
