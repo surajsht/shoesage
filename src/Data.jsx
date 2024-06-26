@@ -36,85 +36,123 @@ export const FeaturedCategoriesData = [
   },
 ];
 
-export const followUsData = [
+export const FollowUsData = [
   {
     id: 0,
-    img: "/followUs/follow-us-1.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-1.jpg",
+        innerData: [
+          {
+            id: 0,
+            img: "/followUs/follow-us-2.jpg",
+          },
+          {
+            id: 1,
+            img: "/followUs/follow-us-3.jpg",
+          },
+        ],
+      },
+    ],
   },
   {
     id: 1,
-    img: "/followUs/follow-us-2.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-4.jpg",
+        innerData: [
+          {
+            id: 0,
+            img: "/followUs/follow-us-5.jpg",
+          },
+          {
+            id: 1,
+            img: "/followUs/follow-us-6.jpg",
+          },
+        ],
+      },
+    ],
   },
   {
     id: 2,
-    img: "/followUs/follow-us-3.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-7.jpg",
+      },
+      {
+        id: 1,
+        img: "/followUs/follow-us-8.jpg",
+      },
+      {
+        id: 2,
+        img: "/followUs/follow-us-9.jpg",
+      },
+      {
+        id: 3,
+        img: "/followUs/follow-us-13.jpg",
+      },
+    ],
   },
   {
     id: 3,
-    img: "/followUs/follow-us-4.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-10.jpg",
+      },
+      {
+        id: 1,
+        img: "/followUs/follow-us-11.jpg",
+      },
+      {
+        id: 2,
+        img: "/followUs/follow-us-12.jpg",
+      },
+      {
+        id: 3,
+        img: "/followUs/follow-us-14.jpg",
+      },
+    ],
   },
   {
     id: 4,
-    img: "/followUs/follow-us-5.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-15.jpg",
+        innerData: [
+          {
+            id: 0,
+            img: "/followUs/follow-us-16.jpg",
+          },
+          {
+            id: 1,
+            img: "/followUs/follow-us-17.jpg",
+          },
+        ],
+      },
+    ],
   },
   {
     id: 5,
-    img: "/followUs/follow-us-6.jpg",
-  },
-  {
-    id: 6,
-    img: "/followUs/follow-us-7.jpg",
-  },
-  {
-    id: 7,
-    img: "/followUs/follow-us-8.jpg",
-  },
-  {
-    id: 8,
-    img: "/followUs/follow-us-9.jpg",
-  },
-  {
-    id: 9,
-    img: "/followUs/follow-us-10.jpg",
-  },
-  {
-    id: 10,
-    img: "/followUs/follow-us-11.jpg",
-  },
-  {
-    id: 11,
-    img: "/followUs/follow-us-12.jpg",
-  },
-  {
-    id: 12,
-    img: "/followUs/follow-us-13.jpg",
-  },
-  {
-    id: 13,
-    img: "/followUs/follow-us-14.jpg",
-  },
-  {
-    id: 14,
-    img: "/followUs/follow-us-15.jpg",
-  },
-  {
-    id: 15,
-    img: "/followUs/follow-us-16.jpg",
-  },
-  {
-    id: 16,
-    img: "/followUs/follow-us-17.jpg",
-  },
-  {
-    id: 17,
-    img: "/followUs/follow-us-18.jpg",
-  },
-  {
-    id: 18,
-    img: "/followUs/follow-us-19.jpg",
-  },
-  {
-    id: 19,
-    img: "/followUs/follow-us-20.jpg",
+    data: [
+      {
+        id: 0,
+        img: "/followUs/follow-us-18.jpg",
+        innerData: [
+          {
+            id: 0,
+            img: "/followUs/follow-us-19.jpg",
+          },
+          {
+            id: 1,
+            img: "/followUs/follow-us-20.jpg",
+          },
+        ],
+      },
+    ],
   },
 ];
