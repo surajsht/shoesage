@@ -9,6 +9,7 @@
 @media (max-width: 1199px) {
   .follow-us-container {
     grid-template-rows: repeat(12, 4rem);
+    padding: 0 1.6rem;
   }
 }
 

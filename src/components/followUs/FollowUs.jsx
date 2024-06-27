@@ -25,8 +25,8 @@ const FollowUs = () => {
                         let { id, img } = inner;
 
                         return (
-                          <a href="https://www.instagram.com">
-                            <img src={img} alt="social-img" key={id} />
+                          <a href="https://www.instagram.com" key={id}>
+                            <img src={img} alt="social-img" />
                           </a>
                         );
                       })}

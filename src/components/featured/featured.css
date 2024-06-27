@@ -22,16 +22,16 @@
   gap: 3.2rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .featured-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .featured-list {
-    gap: 1.6rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -42,9 +42,15 @@
   object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .featured-list img {
     height: 36rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-list img {
+    height: 28rem;
   }
 }
 
