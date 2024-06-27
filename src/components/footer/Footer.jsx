@@ -143,6 +143,23 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="footer-bottom-details">
+        <div className="wrapper">
+          <div className="payments-method">
+            <img src="/payment/payment-1.webp" alt="payment-method" />
+            <img src="/payment/payment-2.webp" alt="payment-method" />
+            <img src="/payment/payment-3.webp" alt="payment-method" />
+            <img src="/payment/payment-4.webp" alt="payment-method" />
+            <img src="/payment/payment-5.webp" alt="payment-method" />
+            <img src="/payment/payment-6.webp" alt="payment-method" />
+            <img src="/payment/payment-7.webp" alt="payment-method" />
+            <img src="/payment/payment-8.webp" alt="payment-method" />
+          </div>
+
+          <span>Copyright © ShopEase all rights reserved.</span>
+        </div>
+      </div>
     </footer>
   );
 };
