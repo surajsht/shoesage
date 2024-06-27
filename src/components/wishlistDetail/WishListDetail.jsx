@@ -5,7 +5,7 @@ import "./wishlistDetail.css";
 const WishListDetail = () => {
   return (
     <div>
-      <div className="wrapper">
+      <div className="wrapper wrapper-small">
         <div className="wishlist-header">
           <h2 className="wishlist-title"> Your WishList </h2>
         </div>
@@ -13,7 +13,9 @@ const WishListDetail = () => {
         <div className="wishlist-body">
           <WishListProduct />
         </div>
+      </div>
 
+      <div className="wrapper">
         <Recommended />
       </div>
     </div>

@@ -17,7 +17,7 @@ const RecommendedList = () => {
         [dataCopy[i], dataCopy[j]] = [dataCopy[j], dataCopy[i]];
       }
 
-      let sliceDataCopy = dataCopy.slice(0, 6);
+      let sliceDataCopy = dataCopy.slice(0, 8);
       setShuffledArray(sliceDataCopy);
     }
   };

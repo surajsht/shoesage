@@ -112,6 +112,10 @@ h6 {
   margin-right: auto;
 }
 
+.wrapper-small {
+  max-width: 132rem;
+}
+
 @media (max-width: 1199px) {
   .wrapper {
     max-width: 100%;

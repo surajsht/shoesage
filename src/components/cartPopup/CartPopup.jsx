@@ -10,7 +10,7 @@ const Cart = () => {
     >
       {cart.length > 0 ? (
         <>
-          <div className="cart-wishlist-popup-content">
+          <div className="cart-wishlist-popup-content custom-scrollbar">
             {cart.map((item) => {
               let { id, img, title, price, productQuantity } = item;
 
