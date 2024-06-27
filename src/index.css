@@ -293,3 +293,31 @@ h6 {
 .section-spacing {
   margin-bottom: 12rem;
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-desc {
+  font-size: 1.8rem;
+}
+
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transform: scale(1);
+  transition: 0.45s;
+}
+
+.image-hover:hover img,
+.image-hover:focus img {
+  transform: scale(1.2);
+}
