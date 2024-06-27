@@ -1,6 +1,7 @@
 import Featured from "../components/featured/Featured";
 import FollowUs from "../components/followUs/FollowUs";
 import Hero from "../components/hero/Hero";
+import Journal from "../components/journal/Journal";
 import Navbar from "../components/navbar/Navbar";
 import Newsletter from "../components/newsletter/Newsletter";
 import ServiceInfo from "../components/serviceInfo/ServiceInfo";
@@ -15,6 +16,7 @@ const Home = () => {
       <SpecialOffer />
       <FeaturedCategories />
       <Featured />
+      <Journal />
       <FollowUs />
       <Newsletter />
       <ServiceInfo />

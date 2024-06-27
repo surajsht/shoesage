@@ -188,3 +188,24 @@ export const ServiceInfoData = [
     desc: "Contact us Anytime",
   },
 ];
+
+export const JournalData = [
+  {
+    id: 0,
+    img: "/journal/journal-1.jpg",
+    title: "Selective Styles Help your look",
+    category: "accessories",
+  },
+  {
+    id: 1,
+    img: "/journal/journal-2.jpg",
+    title: "How to Style a Quiff",
+    category: "accessories",
+  },
+  {
+    id: 2,
+    img: "/journal/journal-3.jpg",
+    title: "Christmas Gift Guide",
+    category: "accessories",
+  },
+];
