@@ -1,5 +1,6 @@
 import Featured from "../components/featured/Featured";
 import FollowUs from "../components/followUs/FollowUs";
+import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
 import Journal from "../components/journal/Journal";
 import Navbar from "../components/navbar/Navbar";
@@ -20,6 +21,7 @@ const Home = () => {
       <FollowUs />
       <Newsletter />
       <ServiceInfo />
+      <Footer />
     </>
   );
 };
