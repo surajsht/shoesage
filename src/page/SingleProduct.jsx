@@ -10,13 +10,17 @@ const SingleProduct = () => {
     <>
       <Navbar />
       <div className="singleProduct-wrapper">
-        <div className="wrapper">
+        <div className="wrapper wrapper-small">
           <SingleProductDetail />
-          <Recommended />
-          <Newsletter />
-          <ServiceInfo />
-          <Footer />
         </div>
+
+        <div className="wrapper">
+          <Recommended />
+        </div>
+
+        <Newsletter />
+        <ServiceInfo />
+        <Footer />
       </div>
     </>
   );

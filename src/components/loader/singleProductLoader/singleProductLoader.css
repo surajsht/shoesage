@@ -1,48 +1,72 @@
-.singleProduct-loader-wrapper {
-  margin-top: 12rem;
-}
-
 .singleProduct-loader-container {
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
+  margin-top: 8rem;
 }
 
 @media (max-width: 991px) {
   .singleProduct-loader-container {
     flex-wrap: wrap;
+    margin-top: 4rem;
   }
 }
 
 .singleProduct-loader-left {
   width: 45%;
+  display: flex;
+  gap: 3.2rem;
 }
 
 @media (max-width: 991px) {
   .singleProduct-loader-left {
     width: 100%;
+    flex-direction: column-reverse;
   }
 }
 
-.singleProduct-loader-left > div:first-child {
+.singleProduct-loader-left > div:last-child {
   height: 60rem;
   width: 100%;
 }
 
-@media (max-width: 575px) {
-  .singleProduct-loader-left > div:first-child {
+@media (max-width: 1024px) {
+  .singleProduct-loader-left > div:last-child {
     height: 48rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .singleProduct-loader-left > div:last-child {
+    height: 40rem;
+    max-width: 38rem;
+    margin: 0 auto;
   }
 }
 
 .loader-left-group {
   display: flex;
+  flex-direction: column;
   gap: 1.2rem;
-  margin-top: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .loader-left-group {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .loader-left-group div {
-  flex: 1;
-  height: 9.2rem;
+  height: 8rem;
+  width: 8.8rem;
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .loader-left-group div {
+    height: 10rem;
+    width: 12rem;
+  }
 }
 
 .singleProduct-loader-right {
@@ -88,20 +112,4 @@
   height: 6rem;
   width: 32rem;
   margin-top: 4rem;
-}
-
-.singleProduct-loader-item {
-  position: relative;
-  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
-  background-size: 200%;
-  animation: skeleton 0.9s infinite;
-}
-
-@keyframes skeleton {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
 }

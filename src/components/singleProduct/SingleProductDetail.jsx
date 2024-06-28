@@ -55,12 +55,6 @@ const SingleProductDetail = () => {
   return (
     <div className="single-product-container">
       <div className="single-product-images">
-        <img
-          src={
-            currentImgLink.currentLink === "" ? img : currentImgLink.currentLink
-          }
-          alt="product-image"
-        />
         <div className="product-extra-images">
           {extraImg.map((imgLink, idx) => {
             return (
@@ -76,6 +70,13 @@ const SingleProductDetail = () => {
             );
           })}
         </div>
+
+        <img
+          src={
+            currentImgLink.currentLink === "" ? img : currentImgLink.currentLink
+          }
+          alt="product-image"
+        />
       </div>
 
       <div className="single-product-details">
