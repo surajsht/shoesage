@@ -1,3 +1,7 @@
+.shop-detail-container {
+  margin-bottom: 6rem;
+}
+
 @media (min-width: 992px) {
   .shop-content {
     display: grid;
