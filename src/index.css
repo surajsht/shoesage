@@ -321,3 +321,19 @@ h6 {
 .image-hover:focus img {
   transform: scale(1.2);
 }
+
+.loader-animation {
+  position: relative;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%;
+  animation: skeleton 0.9s infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
