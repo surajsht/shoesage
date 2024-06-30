@@ -8,3 +8,11 @@
     grid-template-columns: 30% 70%;
   }
 }
+
+@media (min-width: 992px) {
+  .category-filter-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+}
