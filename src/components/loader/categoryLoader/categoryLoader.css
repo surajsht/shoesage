@@ -1,0 +1,27 @@
+.category-loader-container > div:first-child {
+  width: 12rem;
+  height: 2.4rem;
+}
+
+.loader-category-list-container {
+  margin-top: 2.4rem;
+}
+
+@media (max-width: 991px) {
+  .loader-category-list-container {
+    margin-bottom: 2rem;
+  }
+}
+
+.loader-category-list-container > div {
+  width: 7rem;
+  height: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .loader-category-list-container > div {
+    display: inline-block;
+    margin: 0 1.2rem 0 0;
+  }
+}

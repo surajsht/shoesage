@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useCon } from "../../context/Context";
 import "./categoryFilter.css";
+import CategoryLoader from "../loader/categoryLoader/CategoryLoader";
 
 const CategoryFilter = () => {
   let [categoriesList, setCategoriesList] = useState([]);
   let [currentCategory, setCurrentCategory] = useState("all");
-  let { setApiData, apiData, backUpApiData } = useCon();
+  let { setApiData, apiData, backUpApiData, loading } = useCon();
 
   useEffect(() => {
     let uniqueCategory = backUpApiData.reduce(
@@ -34,23 +35,31 @@ const CategoryFilter = () => {
   };
 
   return (
-    <div className="category-filter-container">
-      <h2 className="category-filter-title">Categories</h2>
+    <>
+      {loading ? (
+        <CategoryLoader />
+      ) : (
+        <div className="category-filter-container">
+          <h2 className="category-filter-title">Categories</h2>
 
-      <div className="categories-list-container">
-        {categoriesList.map((item, idx) => {
-          return (
-            <div
-              key={idx}
-              className={`${item} ${item === currentCategory ? "active" : ""}`}
-              onClick={() => filterProducts(item)}
-            >
-              {item}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+          <div className="categories-list-container">
+            {categoriesList.map((item, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={`${item} ${
+                    item === currentCategory ? "active" : ""
+                  }`}
+                  onClick={() => filterProducts(item)}
+                >
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
