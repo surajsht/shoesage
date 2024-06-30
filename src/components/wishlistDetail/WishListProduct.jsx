@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import { useCon } from "../../context/Context";
 
 const WishListProduct = () => {
-  let { wishList } = useCon();
+  let { wishList, setWishList, addToCart } = useCon();
+
+  let removeWishListProduct = (id) => {
+    let filterProduct = wishList.filter((item) => item.id !== id);
+    setWishList(filterProduct);
+  };
 
   return (
     <div className="wishlist-product-container">
@@ -30,8 +35,28 @@ const WishListProduct = () => {
             </div>
 
             <div className="wishlist-btn-group btn-group">
-              <button className="secondary-btn"> Add to Cart </button>
-              <button className="secondary-btn outlined"> Delete </button>
+              <button
+                className="secondary-btn"
+                onClick={() =>
+                  addToCart({
+                    id,
+                    title,
+                    img,
+                    price,
+                    category,
+                    description,
+                    productQuantity: 1,
+                  })
+                }
+              >
+                Add to Cart
+              </button>
+              <button
+                className="secondary-btn outlined"
+                onClick={() => removeWishListProduct(id)}
+              >
+                Delete
+              </button>
             </div>
           </div>
         );

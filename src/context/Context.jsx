@@ -79,6 +79,7 @@ export const Context = ({ children }) => {
     setCart,
     addTowishList,
     wishList,
+    setWishList,
     setOpenCart,
     openCart,
     setOpenWishList,
