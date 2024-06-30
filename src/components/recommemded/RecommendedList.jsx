@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useCon } from "../../context/Context";
 import ProductLoader from "../loader/productsLoader/ProductsLoader";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const RecommendedList = () => {
   const [shuffledArray, setShuffledArray] = useState([]);
 
   let { apiData, loading } = useCon();
+  let location = useLocation();
 
   let randomItems = () => {
     if (apiData && apiData.length > 0) {
@@ -24,7 +25,7 @@ const RecommendedList = () => {
 
   useEffect(() => {
     randomItems();
-  }, [apiData]);
+  }, [apiData, location]);
 
   if (loading) return <ProductLoader />;
 
