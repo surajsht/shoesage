@@ -12,9 +12,9 @@ const CartProduct = () => {
     let updateCart = cart.map((item) => {
       if (item.id === id) {
         if (command === "increase") {
-          return { ...item, productQuantity: item.productQuantity + 1 };
+          return { ...item, productQuantity: Number(item.productQuantity) + 1 };
         } else if (command === "decrease") {
-          return { ...item, productQuantity: item.productQuantity - 1 };
+          return { ...item, productQuantity: Number(item.productQuantity) - 1 };
         }
       }
       return item;
