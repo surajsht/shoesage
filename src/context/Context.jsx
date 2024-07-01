@@ -12,8 +12,10 @@ export const Context = ({ children }) => {
   let [openWishList, setOpenWishList] = useState(false);
   let [gridOption, setGridOption] = useState("single-layout-grid");
   let [sortOptionLabel, setOptionLabel] = useState("Select");
+  let [currentPath, getCurrentPath] = useState();
 
   let fetchData = async () => {
+    setLoading(true);
     try {
       let fetchApi = await fetch("/api/products");
       let response = await fetchApi.json();
@@ -68,7 +70,8 @@ export const Context = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+    window.scrollTo(0, 0);
+  }, [currentPath]);
 
   const contextValue = {
     apiData,
@@ -90,6 +93,7 @@ export const Context = ({ children }) => {
     handleSort,
     backUpApiData,
     setBackUpApiData,
+    getCurrentPath,
   };
 
   return (

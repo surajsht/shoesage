@@ -5,8 +5,19 @@ import Newsletter from "../components/newsletter/Newsletter";
 import ServiceInfo from "../components/serviceInfo/ServiceInfo";
 import Footer from "../components/footer/Footer";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import { useLocation } from "react-router-dom";
+import { useCon } from "../context/Context";
+import { useEffect } from "react";
 
 const SingleProduct = () => {
+  let { getCurrentPath } = useCon();
+
+  let location = useLocation();
+
+  useEffect(() => {
+    getCurrentPath(location);
+  }, [location]);
+
   return (
     <>
       <Navbar />
