@@ -1,7 +1,7 @@
 .single-product-container {
   display: flex;
   gap: 8rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 @media (max-width: 1199px) {
@@ -13,7 +13,6 @@
 @media (max-width: 991px) {
   .single-product-container {
     flex-wrap: wrap;
-    margin-top: 4rem;
   }
 }
 

@@ -4,11 +4,13 @@ import Navbar from "../components/navbar/Navbar";
 import Newsletter from "../components/newsletter/Newsletter";
 import ServiceInfo from "../components/serviceInfo/ServiceInfo";
 import Footer from "../components/footer/Footer";
+import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 
 const SingleProduct = () => {
   return (
     <>
       <Navbar />
+      <Breadcrumb />
       <div className="singleProduct-wrapper">
         <div className="wrapper wrapper-small">
           <SingleProductDetail />

@@ -1,0 +1,28 @@
+.breadcrumb-container {
+  margin-top: 3.2rem;
+  min-height: 2rem;
+}
+
+.breadcrumb-details {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.breadcrumb-details span {
+  position: relative;
+  font-size: 1.4rem;
+  background-color: #eaeaea;
+  padding: 0.2rem 1.2rem;
+}
+
+.breadcrumb-details span:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -2rem;
+  translate: 0 -50%;
+  height: 0.2rem;
+  width: 1rem;
+  background-color: #000;
+}
