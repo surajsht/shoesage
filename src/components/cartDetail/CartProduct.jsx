@@ -44,6 +44,7 @@ const CartProduct = () => {
                 <div className="cart-product-content">
                   <h2> {title} </h2>
                   <span> {category} </span>
+                  <span className="cart-product-price">Rs{price}</span>
                 </div>
               </div>
 

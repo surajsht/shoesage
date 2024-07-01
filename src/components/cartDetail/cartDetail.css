@@ -68,6 +68,7 @@
 @media (max-width: 575px) {
   .cart-product-item {
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
 
@@ -123,7 +124,7 @@
     width: auto !important;
   }
 
-  .cart-product-price {
+  .cart-product-item > .cart-product-price {
     display: none;
   }
 }
@@ -152,6 +153,17 @@
 
 .cart-product-content {
   flex: 1;
+}
+
+.cart-product-content .cart-product-price {
+  display: block;
+  margin-top: 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .cart-product-content .cart-product-price {
+    display: none;
+  }
 }
 
 .cart-product-quantity {
