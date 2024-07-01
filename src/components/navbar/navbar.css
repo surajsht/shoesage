@@ -31,8 +31,10 @@
   gap: 1.6rem;
 }
 
-.nav-links {
-  gap: 2.8rem;
+@media (min-width: 992px) {
+  .nav-links {
+    gap: 2.8rem;
+  }
 }
 
 @media (min-width: 992px) {
